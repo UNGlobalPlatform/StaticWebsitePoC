@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="UNGP TPoC">
+        <meta name="author" content="Nev ONS">
+        <title>Ingestion</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="jumbotron.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/big-data-logo.png" alt="Logo" style="width:230px;">
+            </a>             
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pocnavbars">
+                <span class="navbar-toggler-icon"></span>
+            </button>             
+            <div class="collapse navbar-collapse" id="pocnavbars"> 
+                <ul class="nav navbar-nav" style="{margin:10px;}">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="marketplace.html" name="markeplace">Marketplace</a>
+                    </li>                     
+                    <li class="nav-item active">
+                        <a class="nav-link" href="development.html" name="development">Development</a> 
+                    </li>                     
+                    <li class="nav-item active">
+                        <a class="nav-link" href="workflow.html" name="workflow">Workflow</a> 
+                    </li>                     
+                    <li class="nav-item active">
+                        <a class="nav-link" href="publishing.html" name="publishing">Publishing</a> 
+                    </li>                     
+                    <li class="nav-item active">
+                        <a class="nav-link" href="identityMgmt.html" name="identityMgmt">Identity Mgmt</a> 
+                    </li>                     
+                    <li class="nav-item active">
+                        <a class="nav-link" href="analysis.html" name="analysis">Analysis</a> 
+                    </li>                     
+                    <li class="nav-item active">
+                        <a class="nav-link" href="ingestion.html" name="ingestion">Ingestion</a> 
+                    </li>
+                </ul>
+            </div>
+        </nav>         
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Data Ingestion</h1>
+                <p><div>The core platform requires the capability to ingest, move and store data.</div></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Core Service Value</h2>
+                    <p>In order for the platform to work with data locally it will need to be described, uploaded and potentially clensed before use and its provenance data should be available for inspection and extension as necessary.</p>
+                    <p></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Implementation</h2> 
+                    <p>The Kylo integrated data ingestion platform allows non-developers to import, validate and transform data from a wide range of sources, log its providence and repeat on a scheduled basis. It uses Apache NiFi which can be visually programmed as a key part of the toolset designed fgor business users.&nbsp;</p>
+                    <p><a href="https://kylo.io/">
+                            <img src="data:image/png;base64,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">
+                        </a>&nbsp;<a href="https://nifi.apache.org/">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAAAqCAYAAACqcpV2AAAAAXNSR0IArs4c6QAAAAlwSFlzAAASdAAAEnQB3mYfeAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAABFiSURBVHhe7Vt7cFzVeT/3fXdXd7UrWbYsyW8bW9jEYLvYlhMoI2KwRRsHCO00jzbTaQhhgmlgpgkJntppBhcmIUkTSKmnTSEZ+KO40xrjgDHmbWMgE4jBxtjyUw8/pL27d+/71d+50prdlXYlL46n7eibuSPtvef5vb/vfIffuHEjmYCLh4FconmJz5Avp/P9f1vrqHytHf839Luma90c4pFWJ3CTQRCwLCGmyCcMz9Ly11+7fP+mTZv8S73OgGE2KvWpm4yQbI3r/a/WMn9ElKs7u64lQcDs273jpY7OrgVKOt2ha4Y2cOLAVkVZzMuN3uc9lux+Y/t/nF7S0dXW1Jb+gjaQefWNXdvfvrpzzVp+auMr3umBZZ7OHpZjZHaiPr1Ay2bCRpn8avv27WZhYarSti6WiD9g6VrJWlleIIHnqflEcENrf3+u2kbaOzoSjcrku1ievcXz/IWCwMsyK0RdwiAkvMATO+C111//YCZeDRbGWvHZtQ8rSupGTSsdXlEUouW0F/e+8MydtSCwuI+aaFkjytJNvucRh2Ee/McNGzo2btoUXui4/IYNG5jn9/x2C2E5MBqZ4xHyl7ZlrQ7Z4EyyddZiztW2pZtanjzdd+qb+P4zsY55PPBJt8+Sb11zQ9fNTsD80OrLXCNy3IZ4Ivxnj7B3Oa7Vg7bvZDIZrmxBjYIkLfBdt+Q1xwORnmeRvgxPmMpbWNLV1SR7/LZkun65ZVnE9wPiOE5Jh5CEhAnJCAkJGXZ2LJ5Y4Hqlc+MdiJI7caGIK2+fSqV41SebGYYhlqETjLvinh9u+TLaPX6hY/O/ef3NywjDdzNhGCzp7JoOyliWbf6eELYPz9xADD/T39PzG0x2RUdn52Q/DGe+8voLNy1euHiFB44kbMjIPHcfJp4R+H4+ZEMzDIITJCDvgihG2YI817aJ69glrwNQGexkyCSGP6XfihsKdvhoqim9fPDcuYr7xNwEhA1MqZS82J9tmgaxzPOCG40hCAIlo3WhiCtvf8SW71Hq6z5l6vnok++DLzjmB4bU/Gzc7q+84FEm5llWXCaIPM8Qxmcs+zOEBAO8IH0Nm3vWdYPvghi/ECThsOd4yzwiz2EJ48xOLw0hUUdkT+BswUcTJob2kApQCAgRRWm6Y9nzMN/OT7rZQv+rO2+4ShCkW7KZTMUhOY4ngigSz3XFizXveMYZSExaKgrCRsf+mLaU8WKJujYj1H4et8mfjWecQhtqU9axDCcAmeAtZg0Qe9Rx3Df2vbD9b5Z0ds4QifxHLMf1EMadzYZkAVhZnzw/caOlGw95ov8thoS+6Xr3SyyzgGGZeoxXbxj55wOevJxOp6my/1iVwG5R8aZPMUTvKH9XATDP6kQiQbJZdUQr2j8ONaQbecd1mHzIhFnwfrkurzx3NH1t0CM1xxWO+9dEPC7lcrmSvVE1JscSt6lB886U3r9lvDPwIQnOab29dxAZNjLe8E3o48NspLoIXsnTAob80yvbnr5/xXVr7iQir4We972YFPuqretbiJ56nqnLXivLIUeccBcJ3COEFf8rVpdYqWvaVSTWQt3C8+zDAjioCw6GvRioTfFcR7aIWRE50K5zqL0oB0oQqKDQMPQfBb77L7ovn5GJxVy/aqn6xq6PW6OnIEoSESFJxUDfAUoXNF7soR0XuA/OmDbjU+rgIAlDKMIihqO/fdgwTuAfHki1vdqonvpwPEPzb+7cfkdRw+8Wd4J39Rp+04fs3b3j50XfdhT9f8/w/98f/ruv0sS8k3/Gd2Kr/CIxp20ZiBUTcN7CdCynqqPbFDBzfDQ3Roa7B1uxf+/OZ+4tXXsRRfAhDLy/M3X7QdcsNR8mHyNsEJ730saDtEKbk4xy8+zWqXdK4OTBHMwrdcrLAMxG5Hiizjf0fx9Ipa5trLTBon6XNE6J2+oZ0q+eqaTw1eoY4UcRFEhd5OBRb68q7Nv13Li4dKxxCt+Ph6n5TY2pLbOmTib7Pzo62tKGm1JvzCDxOmW5kSM/IkQd0/WumSiG1J7IpDOcbFkmqF/qZ453ZxfSjmHsclsUSRnUBfgTfselA9gROSWxv152+fx03+nTJJvXiYj4qBrYIIycSHxDJS17U3rvE9Xa8nDZFLhLyxERQzt8vDdWkpggsLNJtf+twgBGom2lL5BboSpXhEGuVTFYjmESmpZSjnIssyNzynm8NV45+MNc9XxamWpppW6pDI2Omf3u15TuRYsORI7Bkq5b25QgaDc9Fz6u5yP4mAavaqR6QKCGlTev6Oy6DlaR4QOfxV6c6U3Knqeeeup8hyWdt7amm2TFPFvqvcWa0iSjZfK/3b791HjJCgv442T95KXnBgbI8f4zRBiS1qqANUX2RRC5R3Kk+XdJvR9hx+jAezxZIMaEnQH2HcJeF0CUZGLo7n78viIinCw8wnDslyS8pxErYhJ8ooYNbgHHtXMctzbVxtylmi1fT5m9L442nSPy6zjC/BKBaclnh+HpmINTF/bNxYcIa6Jl3lw3ZfJPwmwWswjRnPDqqGyU9DXBgYh7l8FZeJF+EQSZemHGoRPaDPw8Hx+IrPkw60pfCNjS/ixoLtjMf6Pt58ZCLP3eJzR8sXXy5NtFjiEHjp0kHOzIaBI82lgeAl1qXzzPe8KQpJVx2y7lzuFOVOaCApKpt1AA+g7YyAWpWWk3cLYl6upWmXmN0KcSSLH4vFAOtuXY5g5wwrvl7aBmQENsoswgDv8uYTc0QeDvEtfFOoDHKCis4LlSLoRXSNdLZ8Df0JXTNBD9GBBAwfXjRhhj+m5IA44NPWFqVjKe+MmV82aRnKaR3jOgeZl7X3UUGu0jgI3VJRcbueCBuH367tHaR4qQEqPwFBrRKBsTBppnPxpTlFV6LjvmqqneRNu46WoPofHq8g5AKzxbIDBCcBHChn6XpEZos6htSHuNOfX5MYeJVzoBpRUdDdJNCVgM9B22P6L9qMiS+F9cMX9uY0zgyN6jyMwMxVcXDDbiF1GOrVfZ5mdTWv/z5QNUtE4uzSmF4QpwEm/m81DXQ/EFXYTve0iVlOacooHxkRIGQWSnkWhuR5b0wAWvuNCBJWKiToEYR2kTgnwcpMYdoSooM/GIc+RYLCKeIApEzQwmEWXVgq+Kyz3JNPzV3LbW1TNggz48fhLG3RjTuFcajDIGz0JqGe6nUGNLocb04rZVXQYIPIJL6HdZJshZHUOq5T1kUmzwx5WwOfOK0wrFEga9yZqGviJOSM1ECTxyPJ/PvarreRguSFFIFgH5TVFOqQgoQfAuk89r72JdLG/zlH9zaUJG4ZraWGQgTDUqirx5/vSpxAYzdvf0Ey7K39YOjmVSN3m+7vv3ITdWEh9WJQolCE3YIY+zWYt7DxTS6j3NzfGk6fwUIvjXdPByGDZ8l9W+ZEL27d7+n+hPnwhWrP6TJ2Ej/1wrU6OxeJzkNW0vguC1n2S+an1tnv32VXNmTWlK1pH3u48T3bKR3Kg5mjg/lQ3csTy/3pBSjyGGO174UHVkKiGOae6q13q/kywyKSCOAe75Tlgf3sZyvAJPoWRPQ+kGolxMJMEmgDVHNy7seN2fGhZEjXu9UnfHtMYU0ZENONF/NvK4LgZQZwpJy4QReJAWcvu4iELNGBOMfh7QyKhns0H8EC/yS8uJEg0eMhc1UxuRuQKACS6q/SiehhP5b8ybNT2RjMvk8Mk+ktPNccUl4yWaA1vJEu4rkJZ/gLScpP0qSgplvqFzj+BQxQkYJgcuHe/8/+fa9UhSvSKIf9GcShIfxrlvoKYUWdV9U6cJ0oJkbPhFYqubxyQK3MWQEcioAc5YGIYHenFkfKyJ/oDfAy+xtnnalBZFFhH158lgViP8JzTwoy03ihPD8Ev729sfWnTggF/dWlEpgBday77HOh+pZcxL3Ufk2OubG9ORuhoAQWy45MJFMPDl+6CZZIQeC6afyCzAt/c/uQtxqTF1iebbk0qJ7b64itoSHwGsqpWEEhd1FTRuQRjB2Xnz0xNEqYLalozbIk8SZkqQEtf14XmZ485x1UIxasNDLryqqk2pZeD/Z30mSzirpDYEx+PEwlOr501DBFo7QLMiRenFCF2RnwRPHzEf8or67AmiVOcigUbtLLLKHvKAqDGrmSg04w67sce33cdcFNogzhmy0wjvEPIocIkC27MsJvSPThClOlFMmtIZStQONazJ40E/1LpB2uxngPs365LK7TSXyNIjD4klWdP9tkzIJGTY7/UCp0NVWm+bMPQVCOMSrx/eVt4LwjqqwiKdXyNhho9EkFll18bjynqak6bj0ZKogOT+DUnXmUghrfdlj2iZwcMTRKlAlLPp2JlGyz5u2u7COkmIMsI27AoK7Go1nTRus2ixHi09io6xkSkGAXwvIG6hiA+v35ogSgUUr1RVr09ofC1rmAsblThJxOToLB4J9+pEoUYdNoSWTRUAZ/PEyOdwtsBo9D2VEBxvRERxPYdSGSlEPlJpOAR7ZYIoVVCM2sGnT/afvX36pDRpSteT3rMDY0oJsr7UfrzN2NZ7UHcoH4XqQwEDgsOdiEcW4Tg1hwgeB6HUBca5iut5Dhw8FLjnLMeGJgtemiBKFTQvVGbv/ujM8d8NaG1Xtk5qIAePnYq8sILzVN61YCc4N7zbI55Fi9k92/UMTaclvelkPv+kpdT/6oOdhrVmzdDJhqrvc95NpY4sdsj8nJlRW23bmiBKFaKo6j7PERq+f/B4z9MrL59Dpk2ZRD460UtEtjLa6DG6FwQSK3CbcRb/aYc3CS9KJK9mMiyjNjh6/HNL1jUtP2GcChnUAgXJVnax6f+g+50Xzs68Zu11quglJogyhkJqdQe3nuolTx+d1HDLZdNbUCwxQCzkwMY4U2FREWBSg05PZ3kkHGl98/BUX8GJ482RoUfRBr2FENqDP56+/MaZSn3Dzsy5M9smiDKmlcDhBSd+7fcHDy2KLV44/4q5M8m+Dw6NqBseocpgyAvF7EMF7OfPODQDFUGUYJQoyMTbSkz2864n53Mqqq+cuyeIMg6itNr9gz3cpD99a//B55ZePn/m/BltOPDqrdoTsYnICyKqZ3ykV0QYfwsxIoWQlrlHpU70gWWXcCrMuzyRAsO6P2We654gyjiIQpu0+ucOnc4lrnv7/QO/njdrRkd9UiFqNjeijixSSxI8Zze8wzGsBs+1aOk9gyLy6FyKwZUyH+JBK1IZjgY94VEzhntppvk2jHxUTF+dKGMcsyIBUXMkNU5clDSrdLflD3kcXLyAKYx+rMf1Oj/sDu+XBXF9IlmfcGEzUPFIy7GipnSNEA7cPkR9oGujoIdalCi48dvb29l3ujP3ItF1n+AEIS+JnOfYuXpbLamlBVF4DnkXWiYZ6ckCDIsW0V3qzo0O9HoC7VueFKLvLF1HsFQKKOGS40pyRGKPlgnls2pDTEatVoXbdWAAZCLqhq6tFQF9l9dyWER1wM6SqYaGEZydTNUTLZujl53GBdRlJSgJwtXsJxBffD30w1txc621ECzSak9ICIvCrkfrUuk/pvVqNEOMYsbB1/r6WkiMDKRJrNlrSkva2QzTCNVYPjHvCvkjRGO/itsvIS2KPE8UimrYIQzQXWm1Hhdu0PPZVtRgl2DKCzyOCYODI/p53h5Ty37PQslnMbDQuThJMsEuRiXsYnkPDQ4MbLUtu3Quz+FC348KDqoBvKHHBnGjWc+WBoAerZpkwsp1CBUGRVnuQaKTu1Fn/feIEDtAq2VgZJwcMlMhJhlcWWH94cwyIkc6Cr2dYKtKy+f5pvqtRmZwkBPZewdiqWPltxZ4vMAq1V+OtanRvjeqvc+N2q9CuTG44j3S3/9epTIXlDVWBFxgehkf6VMT7Nu1Y2tNHcfohEI6FdL9LJrR5zzklKm46me9j6rO/Y5pvIwrDC/RjzDtjKYOPmIbuQcabXXUSv//AZPM0wc4W491AAAAAElFTkSuQmCC">
+                        </a></p>
+                    <p><br></p> 
+                    <p></p>
+                </div>
+                <div class="col-md-4 mt-0 mb-auto">
+                    <h2>Example</h2>
+                    <p>The platform allows data sources to be defined, ingested, validated and stored. NiFi is used to implement many of these functions with the metadata and provenance of of the data being stored within the system for later review.&nbsp;</p>
+                    <p><div>
+                            <a class="btn btn-secondary mt-0 mb-3" href="http://ec2-34-243-30-177.eu-west-1.compute.amazonaws.com/login.html" role="button">View Kylo&nbsp; »</a>
+                        </div> <a class="btn btn-secondary" href="http://ec2-34-243-30-177.eu-west-1.compute.amazonaws.com:8079/nifi/" role="button">View NiFi&nbsp; »</a></p>
+                </div>
+            </div>
+            <hr>
+            <footer>
+                <small>
+        © ONS 2018 developed by Mark Craddock & Neville de Mendonca <br>
+    All rights and trademarks recognised</small> 
+                <img src="assets/ONS.jpg" alt="" align="right" width="150px">
+            </footer>
+        </div>         
+        <!-- /container -->
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Jumbotron Template for Bootstrap</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="jumbotron.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <a class="navbar-brand" href="#">UNGP TPoC</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-2" id="navbarsExampleDefault" name="marketplace">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups"> 
+                    <div class="btn-group" role="group" aria-label="First group"> 
+                        <ul class="navbar-nav mr-auto" style="{margin:10px;}">
+                            <li class="nav-item active">
+                                <a class="btn btn-secondary" href="marketplace.html" name="markeplace">Marketplace</a>
+                            </li>                             
+                            <li class="nav-item active">
+                                <a class="btn btn-secondary ml-1" href="development.html" name="development">Development</a> 
+                            </li>                             
+                            <li class="nav-item active">
+                                <a class="btn btn-secondary ml-1" href="workflow.html" name="workflow">Workflow</a> 
+                            </li>                             
+                            <li class="nav-item active">
+                                <a class="btn btn-secondary ml-1" href="publishing.html" name="publishing">Publishing</a> 
+                            </li>                             
+                            <li class="nav-item active">
+                                <a class="btn btn-secondary ml-1" href="identityMgmt.html" name="identityMgmt">Identity Mgmt</a> 
+                            </li>                             
+                            <li class="nav-item active">
+                                <a class="btn btn-secondary ml-1" href="analysis.html" name="analysis">Analysis</a> 
+                            </li>                             
+                            <li class="nav-item active">
+                                <a class="btn btn-secondary ml-1" href="ingestion.html" name="ingestion">Ingestion</a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Identity Management</h1>
+                <p>This is the technology demonstration platform showing proof of concept examples of the identified core services.</p>
+                <p>The PoC is implemented as a number of highly scalable static web pages providing access to services hosted by either the platform itself or by external providers of specalist technical capabilities.</p>
+                <p>&nbsp;To deliver trusted data, methods, services and training, the platform needs to be supported by a number of key core services and it is these which the PoC is intended to evaluate.</p>
+                <p></p>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Core Service Value</h2>
+                    <p>By providing a means to allow work in the cloud the statasticians can work from anywhere with a reasonably modern device connected to the internet.</p>
+                    <p></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Implementation</h2> 
+                    <p>The Identity Server is running in a Docker container and can be used to facilitate people using external identity providers to assert who they are for the platform.</p>
+                    <p><img src="data:image/png;base64,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"><br></p> 
+                    <p></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Example</h2>
+                    <p>The Identity Server supports a number of standard protocols and can be used to allow any of the platforms services to validate tyhe identiy of the person using them.</p> 
+                    <p><a class="btn btn-secondary" href="https://ec2-34-248-98-17.eu-west-1.compute.amazonaws.com:9443/carbon/admin/login.jsp" role="button">View&nbsp; »</a></p>
+                </div>
+            </div>
+            <hr>
+            <footer>
+                <p>© ONS 2018 developed by Mark Craddock &amp; Neville de Mendonca</p>
+            </footer>
+        </div>         
+        <!-- /container -->
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
